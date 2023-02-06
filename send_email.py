@@ -18,9 +18,9 @@ def send_email(subject, msg):
         server.login(sender_email, sender_password)
         message = MIMEText(msg)
         message['From'] = utils.formataddr(("Mabs Corp.", sender_email))
-        message['to'] = "abdallahachimugu@gmail.com"
+        message['to'] = "your@email.com"
         message['subject'] = subject
-        server.sendmail(sender_email, "abdallahachimugu@gmail.com", message.as_string())
+        server.sendmail(sender_email, "your@email.com", message.as_string())
         server.quit()
         print("Email sent successfully!")
     except:
